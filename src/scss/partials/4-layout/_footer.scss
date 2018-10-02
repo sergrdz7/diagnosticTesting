@@ -1,0 +1,9 @@
+footer {
+  background: darken($background-color, 10%);
+  color: $secondary-color;
+  padding: 15px;
+  text-align: center;
+  p {
+    font-size: $alternative-font-size;
+  }
+}

@@ -1,0 +1,50 @@
+.subtitle {
+
+  padding: 50px 0;
+  text-align: center;
+  text-transform:uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  height: 150px;
+
+  h2{
+    font-size: $h2-font-size;
+    font-weight: $bold;
+    color: $dark-color;
+  }
+
+}
+
+.title-break {
+  width: 160px;
+  height: 3px;
+  border: solid 3px $dark-color;
+  border-radius: 3px;
+}
+
+.page-title {
+  padding-top: 100px;
+  padding-left: 15px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: $h2-font-size;
+  font-weight: $bold;
+  color: $dark-color;
+}
+
+.page-subheading {
+  text-align: left;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: $h4-font-size;
+  font-weight: $bold;
+
+}
+
+@media screen and (max-width: 600px) {
+  .page-title{
+    font-size: $h3-font-size;
+  }
+}

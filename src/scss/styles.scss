@@ -1,0 +1,19 @@
+// @import "bootstrap/config";
+@import "partials/1-tools/reset";
+@import "partials/2-variables/colors";
+@import "partials/2-variables/typography";
+//Maing styles
+@import "base/basestyles";
+@import "partials/3-components/buttons";
+@import "partials/3-components/titles";
+@import "partials/4-layout/navigation";
+@import "partials/4-layout/hero";
+@import "partials/4-layout/about";
+@import "partials/4-layout/services";
+@import "partials/4-layout/students";
+@import "partials/4-layout/partners";
+@import "partials/4-layout/contact";
+@import "partials/4-layout/seminar";
+@import "partials/4-layout/footer";
+@import "partials/5-pages/services-page";
+@import "partials/5-pages/requirements-page";

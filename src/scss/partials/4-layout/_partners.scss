@@ -1,0 +1,38 @@
+.partners-section{
+  background: $background-color-alt;
+  color:$background-color;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.partners-container {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+
+  h3 {
+    padding-top: 10px;
+  }
+  h3 a{
+    color: $background-color;
+    font-size: $h3-font-size;
+    font-weight: $bold;
+  }
+}
+
+.partners {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .partners-img {
+    width: 70px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .partners-container {
+    flex-direction: column;
+  }
+}

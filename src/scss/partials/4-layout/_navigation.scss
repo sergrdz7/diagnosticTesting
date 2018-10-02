@@ -1,0 +1,129 @@
+
+nav {
+  height: 60px;
+  width: 100%;
+  background-color: $background-color-dark;
+  position: fixed;
+  line-height: normal;
+  color:$primary-color;
+}
+.nav-container {
+  margin: 0 auto;
+  padding: 0;
+  height: 60px;
+  color: $secondary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  max-width: 1100px;
+}
+
+ul.nav-list {
+
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  li a{
+    padding-top: 20px;
+    padding-right: 15px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    font-weight: $bold;
+
+  }
+  li a:hover{
+    color: $secondary-color;
+  }
+  a:link {
+    color:  $primary-color;
+  }
+  a:visited{
+    color:  $primary-color;
+  }
+}
+
+.toggle-nav-menu{
+  display: none;
+}
+.toggle-nav-menu:hover {
+  background-color: lighten($background-color, 10%);
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  p{
+    font-weight: $bold;
+    color: $primary-color;
+  }
+}
+.hide {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px){
+
+  .toggle-nav-menu {
+    display:flex;
+    align-self: flex-end;
+    position: fixed;
+  }
+
+  .logo {
+    align-items: center;
+    align-self: flex-start;
+
+    margin-top: 30px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+  }
+
+  ul.nav-list {
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30px;
+
+    li a:first-child {
+      border-top: 1px solid darken($background-color, 20%);
+    }
+
+    li a{
+      display: inline-block;
+      border-bottom: 1px solid darken($background-color, 20%);
+      width: 610px;
+      background-color: darken($background-color, 10%);
+    }
+    li a:hover {
+      color: $secondary-color;
+      background-color: lighten($background-color, 10%);
+    }
+  }
+
+  @-moz-document url-prefix() {
+    .logo {
+      margin-top: 0px;
+    }
+  }
+  @-moz-document url-prefix() {
+    ul.nav-list {
+      margin-top: 0px;
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 601px) {
+  ul.nav-list {
+    visibility: visible;
+  }
+
+}

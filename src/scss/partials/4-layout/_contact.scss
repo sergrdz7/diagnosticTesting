@@ -1,0 +1,81 @@
+.contact-section {
+  background: $alternative-color-dark;
+  padding: 50px 15px;
+  color: $secondary-color;
+  height: auto;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  h2{
+    font-size: $h2-font-size;
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+}
+
+.donate-info{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  p{
+    margin-top: 10px;
+  }
+
+  button {
+    background-color: darken($secondary-color, 10%);
+    margin-top: 40px;
+    padding: 15px 50px;
+    text-align: center;
+  }
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+  align-items:center;
+
+}
+
+.contact-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.address {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 650px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-info {
+    padding-top: 40px;
+  }
+}
