@@ -4,5 +4,5 @@
   function showMenu() {
     console.log("clicked");
     navMenu.classList.toggle("hide");
-    navMenu.classList.toggle("slideRight");
+    // navMenu.classList.toggle("slideDown");
   }

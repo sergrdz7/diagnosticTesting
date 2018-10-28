@@ -13,7 +13,7 @@ var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'build'
+      baseDir: 'src'
     }
   })
 })
