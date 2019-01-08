@@ -28,8 +28,14 @@ gulp.task('browserSync', function() {
 
 gulp.task('htmlFiles', function() {
   return gulp.src('src/*.html')
-    .pipe(gulp.dest('build'))
+    // .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('dist'))
 })
+
+// gulp.task('jsFiles', function() {
+//   return gulp.src('src/*.js')
+//     .pipe(gulp.dest('dist/js/'))
+// })
 
 gulp.task('iconFiles', function() {
   return gulp.src('src/assets/icons/*')
@@ -42,7 +48,8 @@ gulp.task('iconFiles', function() {
         imageminJpegRecompress()
       ]
     ))
-    .pipe(gulp.dest('build/assets/icons'))
+    // .pipe(gulp.dest('build/assets/icons'))
+    .pipe(gulp.dest('dist/assets/icons'))
 })
 
 gulp.task('images', function() {
@@ -56,22 +63,29 @@ gulp.task('images', function() {
         imageminJpegRecompress()
       ]
     ))
-    .pipe(gulp.dest('build/assets/images'))
+    // .pipe(gulp.dest('build/assets/images'))
+    .pipe(gulp.dest('dist/assets/images'))
 })
+
+
 
 gulp.task('sass', function() {
   return gulp.src('src/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
-    .pipe(autoprefixer())
+    .pipe(autoprefixer({
+        browsers: ['last 99 versions'],
+        cascase: false
+    }))
     // .pipe(uglify())
-    .pipe(gulp.dest('build/css')) // Outputs it in the css folder
+    .pipe(gulp.dest('src/css')) // Outputs it in the css folder CHANGE TO BUILD WHEN READY
+    // .pipe(gulp.dest('dist/css')) // Outputs it in the distribution css folder CHANGE TO BUILD WHEN READY
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
 })
 
 // Watchers
-gulp.task('watch', ['browserSync', 'sass', 'htmlFiles'], function() {
+gulp.task('watch', ['browserSync', 'sass', 'htmlFiles', 'images', 'iconFiles'], function() {
   // gulp.watch('src/assets/icons/*.png', ['iconFiles']);
   gulp.watch('src/*.html', ['htmlFiles']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
