@@ -24,7 +24,8 @@ input[type="button"]{
 
 button:hover,
 button:active,
-button:focus {
+button:focus,
+input[type="submit"]:hover {
   outline: 0;
   transform: scale(1.01);
   transform: translateY(3px);
