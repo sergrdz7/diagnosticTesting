@@ -37,6 +37,12 @@ gulp.task('htmlFiles', function() {
 //     .pipe(gulp.dest('dist/js/'))
 // })
 
+gulp.task('jsScripts', function() {
+  return gulp.src('src/js/*.js')
+
+  .pipe(gulp.dest('dist/js'))
+})
+
 gulp.task('iconFiles', function() {
   return gulp.src('src/assets/icons/*')
     .pipe(imagemin(
@@ -77,7 +83,7 @@ gulp.task('sass', function() {
         cascase: false
     }))
     // .pipe(uglify())
-    .pipe(gulp.dest('src/css')) // Outputs it in the css folder CHANGE TO BUILD WHEN READY
+    .pipe(gulp.dest('dist/css')) // Outputs it in the css folder CHANGE TO BUILD WHEN READY
     // .pipe(gulp.dest('dist/css')) // Outputs it in the distribution css folder CHANGE TO BUILD WHEN READY
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
@@ -92,3 +98,6 @@ gulp.task('watch', ['browserSync', 'sass', 'htmlFiles', 'images', 'iconFiles'], 
   gulp.watch('src/*.html', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload);
 })
+
+//BUILD
+gulp.task('build',['sass', 'htmlFiles', 'jsScripts', 'images', 'iconFiles']);
