@@ -888,8 +888,6 @@ header {
     resize: none; }
   .signup-info input.button {
     background: #b7af9b; }
-  .signup-info input:invalid {
-    border: 2px solid red; }
 
 .contact-info {
   background: #144081;
@@ -1005,7 +1003,7 @@ header {
             flex-direction: column;
     text-align: center; }
   .signup-info button, .signup-info input, .signup-info textarea {
-    width: 400px; } }
+    width: 300px; } }
 
 .seminar-section {
   background: #F4F1EA;
